@@ -45,6 +45,7 @@ public class WorldItem : NetworkedBehaviour {
         WorldItemTracker.Instance.RegisterItem(this);
     }
     void UnregisterWithWorldItemTracker() {
+        if (WorldItemTracker.Instance == null) return;
         WorldItemTracker.Instance.UnregisterItem(this);
     }
 }
